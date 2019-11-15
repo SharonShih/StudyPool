@@ -1,0 +1,53 @@
+.background-dashboard {
+    background:url('../../assets/images/star-sky.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.section-main {
+    height: 400px;
+}
+
+@media (min-width:750px) {
+    header.masthead {
+      padding-top: 15rem;
+      padding-bottom: 15rem;
+    }
+}
+.icon-happy {
+  background:url('../../assets/images/happy128x128.png') no-repeat center center;
+  width: 128px;
+  height: 128px;
+  margin-left: 110px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+.icon-list {
+    background:url('../../assets/images/list128x128.png') no-repeat center center;
+    width: 128px;
+    height: 128px;
+    margin-left: 110px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+.icon-piggy {
+    background:url('../../assets/images/piggy128x128.png') no-repeat center center;
+    width: 128px;
+    height: 128px;
+    margin-left: 110px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
