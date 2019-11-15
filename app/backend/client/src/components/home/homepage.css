@@ -35,3 +35,13 @@ header.masthead-2 {
   height: 32px;
   margin-top: 10px;
 }
+.input-descrption {
+  height: 20%;
+}
+.create-btn {
+  margin: 30px;
+}
+.input-container {
+  margin-left: 200px;
+  width: 60%;
+}
