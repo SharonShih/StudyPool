@@ -1,18 +1,23 @@
 import React from 'react'
+import { Button} from 'reactstrap';
 
-const EventCard = ({eventInfo}) => {
+const EventCard = ({eventInfo,leaveTable,addTable}) => {
 
   let action;
   if (eventInfo.isGoing) {
-    action = "leave";
+    action = (
+      <Button onClick={() => leaveTable(eventInfo.id)}>Leave</Button>
+    )
   } else {
-    action = "join"
+    action = (
+      <Button onClick={() => addTable(eventInfo.id)}>add</Button>
+    )
   }
 
   return (
     <div className="" >
 
-          <div className="card" style={{width:"300px",marginLeft:"10px"}}>
+          <div className="card" style={{width:"200px",marginLeft:"10px"}}>
             <div className="card-body">
               <h5 className="card-title">Event Name: {eventInfo.name}</h5>
               <p className="card-text">Description: {eventInfo.description}</p>
@@ -21,7 +26,7 @@ const EventCard = ({eventInfo}) => {
               <p className="card-text">End Time:{eventInfo.endTime}</p>
               <p className="card-text">Numbers:{eventInfo.participants}</p>
               <a href="#" className="card-link"></a>
-              <a href="#" className="card-link">{action}</a>
+              {action}
             </div>
           </div>
     </div>

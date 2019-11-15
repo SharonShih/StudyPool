@@ -21,7 +21,8 @@
   flex-direction: row;
   justify-content: space-around;
   overflow-x: auto;
-  white-space: nowrap;
+  float: none;
+  /* white-space: nowrap; */
 }
 .current-div {
   margin-top: 50px;
