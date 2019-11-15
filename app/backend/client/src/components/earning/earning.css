@@ -13,3 +13,23 @@
   color: white;
   border-color: rgb(30, 120, 216);
 }
+.upcoming-div {
+  margin-top: 50px;
+  height: 400px;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.current-div {
+  margin-top: 50px;
+  height: 400px;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: auto;
+  white-space: nowrap;
+}
