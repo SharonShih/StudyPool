@@ -10,7 +10,7 @@ class Earning extends Component {
       <div className="dashboard">
         <NavBar />
         <Header />
-        <Footer />
+        {/* <Footer /> */}
 
       </div>
     );

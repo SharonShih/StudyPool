@@ -1,5 +1,5 @@
 .background-dashboard {
-    background:url('../../assets/images/star-sky.jpg') no-repeat center center;
+    background:url('../../assets/images/study-11.jpg') no-repeat center center;
     background-size: cover;
     height: 100%;
 }
@@ -51,3 +51,8 @@ header.masthead {
   padding-top: 100px;
   padding-bottom: 30px;
 }
+
+.btn-primary {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+} 

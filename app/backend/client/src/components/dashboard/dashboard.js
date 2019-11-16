@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './navbar';
-import Header from './header';
-import Desc from './desc';
+import Header from '../earning/earning_header';
 import Footer from './footer';
 
 class DashBoard extends Component {
@@ -11,8 +10,7 @@ class DashBoard extends Component {
         <div className="dashboard">
             <NavBar />
             <Header />
-            <Desc />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
   }

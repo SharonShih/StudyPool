@@ -1,5 +1,5 @@
 .background-signin {
-  background:url('../../assets/images/star-sky.jpg') no-repeat center center;
+  background:url('../../assets/images/study_0.jpg') no-repeat center center;
   background-size: cover;
   height: 100%;
 }
@@ -31,17 +31,17 @@ header.masthead-1 {
   margin: 0px;
 }
 .icon-image {
-  background:url('../../assets/images/lock-icon-1.png') no-repeat center center;
-  width: 80px;
-  height: 80px;
-  margin-left: 85px;
+  background:url('../../assets/images/lock-64.png') no-repeat center center;
+  width: 64px;
+  height: 64px;
+  margin-left: 93px;
   margin-top: 30px;
   margin-bottom: 40px;
 }
 .login-dark{
   width: 320px;
   height: 500px;
-  background-color: #1e2833;
+  background-color: rosybrown;
   padding: 40px;
   border-radius: 4px;
   position: absolute;
@@ -51,9 +51,9 @@ header.masthead-1 {
   box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
 }
 .button-style{
-  background: #214a80;
+  background: white;
   /* font-weight:400; */
-  color:#FFF;
+  color:white;
   text-align:center;
   border:1px solid transparent;
   padding: 10px;
@@ -66,9 +66,9 @@ header.masthead-1 {
   width: 100%;
   height: 40px;
   line-height: 1.5;
-  color: #495057;
-  background-color: #1e2833;
-  border-color:#495057;
+  color: #FFF;
+  background-color: rosybrown;
+  border-color:#FFFF;
   border-bottom-width: 1px;
   border-top-width: 0px;
   border-left-width: 0px;
@@ -76,7 +76,7 @@ header.masthead-1 {
   margin: 10px;
 }
 .text-style {
-  color: #72787e;
+  color: white;
   font-size: 10px;
   margin-top: 10px;
   margin-left: 60px;
