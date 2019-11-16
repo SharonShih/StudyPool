@@ -45,3 +45,9 @@ header.masthead-2 {
   margin-left: 200px;
   width: 60%;
 }
+
+
+.btn-primary {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+} 

@@ -22,6 +22,7 @@
   justify-content: space-around;
   overflow-x: auto;
   float: none;
+  padding-left: 90px;
   /* white-space: nowrap; */
 }
 .current-div {
@@ -33,4 +34,10 @@
   justify-content: space-around;
   overflow-x: auto;
   white-space: nowrap;
+  padding-left: 90px;
+}
+
+.creat-btn {
+  margin-left: 1000px;
+  width: 200px;
 }

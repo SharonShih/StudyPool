@@ -128,7 +128,7 @@ class Header extends Component {
       <header className="masthead-1 background-home">
       <div className="profile-container">
 
-      <Button color="info" onClick={this.handleModalClick}>Create Table</Button>
+      <Button className="creat-btn"color="info" onClick={this.handleModalClick}>Create Table</Button>
       <Modal isOpen={this.state.modal} toggle={this.handleModalClick} >
         <ModalHeader >Create Table</ModalHeader>
         <ModalBody >
@@ -139,7 +139,7 @@ class Header extends Component {
     
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon3">Event Title</span>
+            <span class="input-group-text" id="basic-addon3" >Event Title</span>
         </div>
         <input type="text" class="form-control" onChange={e => this.setState({eventTitle:e.target.value})}/>
     </div>
@@ -165,7 +165,7 @@ class Header extends Component {
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Start Time</label>
         </div>
-        <input type="text" class="form-control" placeholder="" onChange={e => this.setState({startTime:e.target.value})}/>
+        <input type="text" class="form-control" placeholder="ex. 10:00am" onChange={e => this.setState({startTime:e.target.value})}/>
         {/* <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">7:00 am</option>
@@ -204,7 +204,7 @@ class Header extends Component {
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">End Time</label>
         </div>
-        <input type="text" class="form-control" placeholder="MM/DD/YY" onChange={e => this.setState({endTime:e.target.value})}/>
+        <input type="text" class="form-control" placeholder="ex. 13:30pm" onChange={e => this.setState({endTime:e.target.value})}/>
         {/* <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">7:00 am</option>
