@@ -12,7 +12,7 @@ class NavBar extends Component {
       <nav className="navbar navbar-light navbar-expand bg-light navigation-clean">
         <div className="container">
         <Route>
-        <Link to="/home" className="navbar-brand" role="button">StudyPool</Link>
+        <Link to="/event" className="navbar-brand" role="button">StudyPool</Link>
           <div className="col-md-10 col-lg-8 col-xl-7 mx-auto search">
             <form>
               <div className="form-row">
