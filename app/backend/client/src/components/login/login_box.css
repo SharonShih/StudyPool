@@ -1,5 +1,5 @@
 .background-signin {
-  background:url('../../assets/images/study_0.jpg') no-repeat center center;
+  background:url('../../assets/images/study_0-2.jpg') no-repeat center center;
   background-size: cover;
   height: 100%;
 }
@@ -45,13 +45,13 @@ header.masthead-1 {
   padding: 40px;
   border-radius: 4px;
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 39%;
   color: #fff;
   box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
 }
 .button-style{
-  background: white;
+  background: #17a2b8;
   /* font-weight:400; */
   color:white;
   text-align:center;

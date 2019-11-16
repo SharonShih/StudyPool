@@ -12,7 +12,7 @@ class NavBar extends Component {
       <nav className="navbar navbar-light navbar-expand bg-light navigation-clean">
         <div className="container">
         <Route>
-        <Link to="/home" className="navbar-brand" role="button">StockU</Link>
+        <Link to="/home" className="navbar-brand" role="button">StudyPool</Link>
           <div className="col-md-10 col-lg-8 col-xl-7 mx-auto search">
             <form>
               <div className="form-row">
@@ -24,10 +24,8 @@ class NavBar extends Component {
           
             <div className="collapse navbar-collapse" id="navcol-1"></div>
             <DropdownButton className="dropdown-style" title="Hello Champion!">
-              <Dropdown.Item><Link to="/home" role="button">Home</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/event" role="button">Event List</Link></Dropdown.Item>
               <Dropdown.Item><Link to="/profile" role="button">My Profile</Link></Dropdown.Item>
-              <Dropdown.Item><Link to="/earning" role="button">My Earning</Link></Dropdown.Item>
-              <Dropdown.Item><Link to="/fav" role="button">Favortie List</Link></Dropdown.Item>
               <Dropdown.Divider></Dropdown.Divider>
               <Dropdown.Item><Link to="/" role="button">Logout</Link></Dropdown.Item>
             </DropdownButton>

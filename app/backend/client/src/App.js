@@ -17,7 +17,7 @@ import Manage from './components/manage_earning/manage';
 class App extends React.Component {
   render(){
     return (
-      <DashBoard />
+      <SignIn />
     );
   }
 }

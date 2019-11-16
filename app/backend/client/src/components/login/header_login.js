@@ -19,7 +19,7 @@ class Header extends Component {
                                 <input className="input-style" type="email" placeholder="  Email" />
                                 <input className="input-style" type="password" placeholder="  Password" />
                                 <Route>
-                                    <Link to="/home" className="btn-primary btn-block button-style" role="button">Log In</Link>
+                                    <Link to="/event" className="btn-primary btn-block button-style" role="button">Log In</Link>
                                     <Link to="/" className="text-style" role="button">Forget your Password?</Link>
                                 </Route>
                             </div>

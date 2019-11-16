@@ -4,7 +4,7 @@ import {
   Link
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './earning.css';
+import './event.css';
 import EventCard from './eventCard'
 
 import { Button, Modal, ModalBody, ModalFooter,ModalHeader } from 'reactstrap';
@@ -125,7 +125,8 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="container">
+      <header className="masthead-1 background-home">
+      <div className="profile-container">
 
       <Button color="info" onClick={this.handleModalClick}>Create Table</Button>
       <Modal isOpen={this.state.modal} toggle={this.handleModalClick} >
@@ -322,6 +323,7 @@ class Header extends Component {
           }
         </div>
       </div>
+      </header>
     );
   }
 }
