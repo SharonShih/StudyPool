@@ -8,7 +8,7 @@ import SignUp from './components/signup/signup_box';
 import Home from './components/home/homepage';
 import Profile from './components/profile/profile';
 import Event from './components/event/event';
-import Manage from './components/manage_earning/manage';
+// import Manage from './components/manage_earning/manage';
 // import Favorite from './components/favorite/favorite';
 import * as serviceWorker from './serviceWorker';
 
@@ -25,7 +25,7 @@ const routing = (
             <Route path="/home" component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/event" component={Event} />
-            <Route path="/manage+earning" component={Manage} />
+            {/* <Route path="/manage+earning" component={Manage} /> */}
             {/* <Route path="/fav" component={Favorite} /> */}
 
             {/* <Profile /> */}
