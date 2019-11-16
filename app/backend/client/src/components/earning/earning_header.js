@@ -38,7 +38,19 @@ class Header extends Component {
       modal:false,
       hostTables:myTables,
       upcomingTables:upcomingTables,
-      currentOpeningTables:currentTables
+      currentOpeningTables:currentTables,
+
+
+      eventTitle:"",
+      eventDate:"",
+      startTime:"",
+      endTime:"",
+      eventLocation:"",
+      url:"",
+      participateLimit:"",
+      eventDescription:""
+
+
     }
   }
 
@@ -73,14 +85,41 @@ class Header extends Component {
     // let endTime = "02:00";
     // let isGoing = true;
     // 
-    let newTable = {id:10,name:"10", participants:"4",description:"description",location:"111", ownerID:"me",startTime:"03:00", endTime:"05:00",isGoing:true};
+    // let newTable = {id:10,name:"10", participants:"4",description:"description",location:"111", ownerID:"me",startTime:"03:00", endTime:"05:00",isGoing:true};
+    let movedTable = this.state.currentOpeningTables.filter(tableId => {
+      return tableId.id == folderId;
+    })
+    console.log("this is removed item:");
+    console.log(movedTable[0]);
     // this.setState(prevState => ({
     //   currentTables: newCurrentTable
     // }))
     this.setState(prevState =>({
       currentOpeningTables:newCurrentTable,
-      upcomingTables: [...prevState.upcomingTables, newTable]
+      upcomingTables: [...prevState.upcomingTables, movedTable[0]]
     }))
+  }
+  handleCreateHostTable = () => {
+    let newHostTableName = this.state.eventTitle
+    let participants = this.state.participateLimit;
+    let description = this.state.description;
+    let location = this.state.location;
+    let ownerID = "me";
+    let startTime = this.state.startTime;
+    let endTime = this.state.endTime;
+    let isGoing = true; 
+    let size = this.state.hostTables.size;
+    // console.log(this.state.eventTitle)
+    // console.log(this.state.participateLimit)
+    // console.log(this.state.description)
+    // console.log(this.state.startTime)
+    // console.log(this.state.endTime)
+    // console.log(this.state.location)
+    let newHostTable = {id:size ,name:newHostTableName, participants:participants,description:description,location:location, ownerID:"me",startTime:startTime, endTime:endTime,isGoing:true};
+    this.setState(prevState =>({
+      hostTables: [...prevState.hostTables, newHostTable]
+    }))
+    this.handleModalClick();
   }
 
 
@@ -101,9 +140,9 @@ class Header extends Component {
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Event Title</span>
         </div>
-        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" />
+        <input type="text" class="form-control" onChange={e => this.setState({eventTitle:e.target.value})}/>
     </div>
-    <div class="input-group mb-3">
+    {/* <div class="input-group mb-3">
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Event Type</label>
         </div>
@@ -112,19 +151,21 @@ class Header extends Component {
             <option value="1">Specific Class Study Group</option>
             <option value="2">General Topic Workshop</option>
         </select>
-    </div>
+    </div> */}
     <label for="basic-url">Duration</label>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Date</span>
         </div>
-        <input type="text" class="form-control" placeholder="MM/DD/YY" aria-label="StartDate" aria-describedby="basic-addon1" />
+
+        <input type="text" class="form-control" placeholder="MM/DD/YY" onChange={e => this.setState({eventDate:e.target.value})}/>
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Start Time</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
+        <input type="text" class="form-control" placeholder="" onChange={e => this.setState({startTime:e.target.value})}/>
+        {/* <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">7:00 am</option>
             <option value="2">7:30 am</option>
@@ -156,13 +197,14 @@ class Header extends Component {
             <option value="28">20:30 pm</option>
             <option value="29">21:00 pm</option>
             <option value="30">21:30 pm</option>
-        </select>
+        </select> */}
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">End Time</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
+        <input type="text" class="form-control" placeholder="MM/DD/YY" onChange={e => this.setState({endTime:e.target.value})}/>
+        {/* <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">7:00 am</option>
             <option value="2">7:30 am</option>
@@ -194,47 +236,48 @@ class Header extends Component {
             <option value="28">20:30 pm</option>
             <option value="29">21:00 pm</option>
             <option value="30">21:30 pm</option>
-        </select>
+        </select> */}
     </div>
-    <label for="basic-url">Event Location or URL</label>
+    <label for="basic-url">Event Location</label>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Location</span>
         </div>
-        <input type="text" class="form-control" placeholder="City" aria-label="Location" aria-describedby="basic-addon1" />
+        <input type="text" class="form-control" placeholder="City" onChange={e => this.setState({location:e.target.value})}/>
     </div>
     <label for="basic-url">Or</label>
-    <div class="input-group mb-3">
+    {/* <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Zoom/Google Hangout URL</span>
         </div>
         <input type="text" class="form-control" placeholder="http://" aria-label="meetingURL" aria-describedby="basic-addon1" />
-    </div>
+    </div> */}
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Participate Limit</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
+        <input type="text" class="form-control" placeholder="" onChange={e => this.setState({participateLimit:e.target.value})}/>
+        {/* <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">1-4 People</option>
             <option value="2">5-10 People</option>
             <option value="3">Unlimited</option>
-        </select>
+        </select> */}
     </div>
 
     <div class="input-group input-descrption">
         <div class="input-group-prepend">
-            <span class="input-group-text">Event Description</span>
+            <span class="input-group-text" >Event Description</span>
         </div>
-        <textarea class="form-control" aria-label="Event Description"></textarea>
+        <textarea class="form-control" onChange={e => this.setState({description:e.target.value})}></textarea>
     </div>
 
 
 
     <div className="create-btn">
         {/* <Link to="/signup" className="btn btn-primary btn-block btn-lg" role="button">Create Table!</Link> */}
-        <Button color="info" onClick={this.handleAddHostTable}>Create Table!</Button>
+        <Button color="info" onClick={this.handleCreateHostTable}>Create Table!</Button>
     </div>
 
     </div>
