@@ -13,7 +13,6 @@ class NavBar extends Component {
         <Route>
           <div className="container">
             <Link to="/" className="navbar-brand" role="button">StudyPool</Link>
-            <h5 className="h4-style">Welcome Back!</h5>
             <div className="collapse navbar-collapse" id="navcol-1">
               <Link to="/signup" className="btn btn-primary ml-auto" role="button">Create a New Account</Link>
             </div>

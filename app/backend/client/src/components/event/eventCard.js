@@ -1,5 +1,9 @@
 import React from 'react'
 import { Button} from 'reactstrap';
+import {
+  Route,
+  Link
+} from "react-router-dom";
 
 const EventCard = ({eventInfo,leaveTable,addTable}) => {
 
@@ -17,7 +21,7 @@ const EventCard = ({eventInfo,leaveTable,addTable}) => {
   return (
     <div className="" >
 
-          <div className="card" style={{width:"240px",marginLeft:"10px"}}>
+          <div className="card" >
             <div className="card-body">
               <h5 className="card-title">Event Name: {eventInfo.name}</h5>
               <p className="card-text">Description: {eventInfo.description}</p>
@@ -27,6 +31,9 @@ const EventCard = ({eventInfo,leaveTable,addTable}) => {
               <p className="card-text">Numbers:{eventInfo.participants}</p>
               <a href="#" className="card-link"></a>
               {action}
+              <Link to="/detail">
+                <Button className="card-text" style={{marginLeft:"50px"}}>See Detail</Button>
+              </Link>
             </div>
           </div>
     </div>

@@ -22,7 +22,8 @@
   justify-content: space-around;
   overflow-x: auto;
   float: none;
-  padding-left: 90px;
+  padding-left: 50px;
+  margin: 20px;
   /* white-space: nowrap; */
 }
 .current-div {
@@ -34,7 +35,8 @@
   justify-content: space-around;
   overflow-x: auto;
   white-space: nowrap;
-  padding-left: 90px;
+  padding-left: 50px;
+  margin: 20px;
 }
 
 .creat-btn {
@@ -54,4 +56,10 @@
   font-family: 'Roboto','sans-serif';
   line-height: 30px;
   padding-left: 10px;
+}
+.card-body {
+  position: relative;
+  width: 300px;
+  margin-right: 10px;
+
 }

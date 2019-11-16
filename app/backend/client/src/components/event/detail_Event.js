@@ -1,23 +1,20 @@
-import React, { Component, } from 'react';
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from '../home/navbar_home';
+import Header from './detail_header';
+import Footer from '../dashboard/footer';
 
-var latlog;
-const google=window.google
 class EventDetail extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      
-    }
-  }
+  render() {//building react method that comes inse od react component
+    return (//jsx code and can return only a single parent tag
+      <div className="dashboard">
+        <NavBar />
+        <Header />
+        {/* <Footer /> */}
 
-  
-  render() {
-    return (
-      <div className="container">
-        <h1>1123</h1>
-        
       </div>
-    )
+    );
   }
 }
-export default EventDetail
+
+export default EventDetail;

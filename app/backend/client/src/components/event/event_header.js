@@ -11,7 +11,7 @@ import EventCard from './eventCard'
 import { Button, Modal, ModalBody, ModalFooter,ModalHeader } from 'reactstrap';
 
 const myTables = [
-  {name:"123", participants:"4",description:"description",location:"111", ownerID:"me",startTime:"03:00", endTime:"05:00",isGoing:true},
+  {name:"Coding Challenge BFS", participants:"4",description:"description",location:"111", ownerID:"me",startTime:"03:00", endTime:"05:00",isGoing:true},
 ]
 
 const upcomingTables = [
@@ -300,12 +300,12 @@ class Header extends Component {
         <div className="upcoming-div"> 
           {this.state.upcomingTables.map((event) => {
               return (
-                  <Link to="/detail">
+                  // <Link to="/detail">
                   <EventCard 
                     eventInfo = {event}
                     leaveTable = {this.handLeaveTable}             
                   />
-                  </Link>
+                  // </Link>
               )
               
     
