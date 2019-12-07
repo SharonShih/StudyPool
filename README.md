@@ -1,4 +1,4 @@
-# SJSU Google Hackathon 2019
+# SJSU Google Hackathon 2019 - Third Prize Winner
 
 ## Getting started 
 
